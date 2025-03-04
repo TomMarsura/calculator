@@ -13,11 +13,9 @@ if __name__ == '__main__':
     calc = Calculator()
 
     if args.operation == 'sum':
-        if args.first_value is not None and args.second_value is not None:
-            print(f'{args.first_value} + {args.second_value} = {calc.mysum(args.first_value, args.second_value)}')
-        else:
-            print("Error: sum operation requires --first_value and --second_value.")
-
+        print(f'{args.first_value} + {args.second_value} = {calc.mysum(args.first_value, args.second_value)}')
+    elif args.operation == 'multiply':
+        print(f'{args.first_value} * {args.second_value} = {calc.multiply(args.first_value, args.second_value)}')
     elif args.operation == 'mean':
         if args.values:
             print(f'Mean of {args.values} = {calc.my_mean(args.values)}')
